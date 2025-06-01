@@ -1,0 +1,87 @@
+ create table info {
+    -> unique_id INT IDENTITY(1,1) PRIMARY KEY,
+    -> ADMIN VARCHAR(4),
+    -> SUB_UNIT VARCHAR(5),
+    -> SITE_NAME VARCHAR(12),
+    ->  PLOTNAME VARCHAR(10),
+    -> LOCATION VARCHAR (10),
+    -> DATE_OB DATE,
+    -> START DATETIME,
+    -> END DATETIME,
+    -> OBSERVER VARCHAR(30),
+    -> VISIT TINYINT,
+    -> INTERVAL VARCHAR(20),
+    -> ID VARCHAR(30),
+    -> DISTANCE VARCHAR(50),
+    -> FLYOVER BOOLEAN,
+    -> SEX VARCHAR(20),
+    -> COMMON_NAME VARCHAR(35),
+    -> SCINTIFIC_NAME VARCHAR(50),
+    -> TSN LONG,
+    -> TAXON_CODE LONG,
+    -> AOU VARCHAR(7),
+    -> PIF_STATUS BOOLEAN,
+    -> Regional_Stewardship_Status BOOLEAN,
+    -> TEMPRATURE LONG,
+    -> HUMIDITY DOUBLE,
+    -> SKY VARCHAR(50),
+    -> WIND VARCHAR(50),
+    -> DISTURBANCE VARCHAR (50),
+    -> PREVIOUS BOOLEAN,
+    -> INIT_THREE_MIN_COUNT BOOLEAN
+    -> };
+    💬 6. Observer Reports
+Filter by OBSERVER name
+
+Show all observations made by a person
+
+Plot observation timing (START to END)
+
+7 Select a COMMON_NAME and show:
+
+Count over time
+
+Location distribution
+
+Observer data
+
+Sex distribution
+
+Flyover status
+
+📆 3. Date-Based Analysis
+Filter data by date or observation month
+
+Plot daily/weekly/monthly trends of:
+
+Bird counts
+
+Visits
+
+Temperature
+
+Humidity
+
+⚙️ 8. Habitat & Visit Analysis
+Filter by SUB_UNIT, SITE_NAME, VISIT
+
+Compare:
+
+Average bird count per site
+| Category                       Feature                      Description                                                                                                             |
+|------------------------------|----------------------------|---------------------------------------------------------------------------------------------------------------------    |
+|0 📊 **Data Overview**         | Data Dashboard              | Show total records, unique bird species, number of observers, locations, and visits.                                  |
+|0 📅 **Time-Based Filtering**  | Filter by Year / Date       | Use the `Year` and `Date` columns to analyze bird activity over time.                                                 |
+|0 🌍 **Location Insights**     | Site & Plot Analysis        | Analyze sightings across `Site_Name`, `Plot_Name`, and `Location` (heatmap or bar chart).                             |
+|0 🧑‍🔬 **Observer Reports**      | Individual Observer Summary | Filter by `Observer`, analyze their bird counts, active dates, and patterns.                                          |
+| 0🐦 **Species Details**       | Bird Profiles               | On selecting `Common_Scientific_Name`, show charts for: sightings trend, sex ratio, distance, flyover frequency, etc. |
+| >>📈 **Behavior Patterns**     | Interval & Distance         | Correlate bird presence with `Interval_ID`, `Distance`, `Flyover`, `Sex`.                                             |
+|0 🌤️ **Environmental Impact**  | Weather Analysis            | Use `Temperature`, `Humidity`, `Sky`, and `Wind` to analyze how weather affects bird presence.                        |
+|0 🚨 **Conservation Focus**    | At-Risk Species             | Highlight species with `PIF_Watch` or `Regional` marked TRUE. Add alerts for those needing attention.                 |
+|xx 🔁 **Repeat Observations**   | Previous vs New             | Analyze how many birds were previously observed (`Previous`) or were new in `Init_Three_Min_Cnt`.                     |
+|xxx 📁 **Download Reports**      | Export Filtered Data        | Let users filter and download specific data as CSV.                                                                   |
+Date Range Filter
+Allow users to filter records by date. Useful for analyzing seasonal trends or recent activity.
+Search Bar
+Add a quick search option for species names, observer names, or location names.
+feedback
